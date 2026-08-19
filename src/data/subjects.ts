@@ -18,6 +18,7 @@ export const subjects: SubjectMeta[] = [
     topics: [
       { key: 'digestive_system', label: 'Digestive System', icon: '🍎', available: true },
       { key: 'circulatory_system', label: 'Circulatory System', icon: '❤️', available: true },
+      { key: 'respiratory_system', label: 'Respiratory System', icon: '🫁', available: true },
       { key: 'muscular_system', label: 'Muscular System', icon: '💪', available: true },
       { key: 'skeletal_system', label: 'Skeletal System', icon: '🦴', available: true },
     ],

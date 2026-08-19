@@ -1,160 +1,15 @@
 [
   {
-    "id": "sci-digest-001",
-    "subject": "science",
-    "topic": "digestive_system",
-    "grade": 4,
-    "difficulty": "easy",
-    "type": "multiple_choice",
-    "question": "Which organ breaks down food using strong acids?",
-    "options": ["Heart", "Stomach", "Lungs", "Brain"],
-    "answer": "Stomach",
-    "explanation": "The stomach uses acid to mash food into a soupy mix so the body can use it.",
-    "hint": "It growls when you're hungry."
-  },
-  {
-    "id": "sci-digest-002",
-    "subject": "science",
-    "topic": "digestive_system",
-    "grade": 4,
-    "difficulty": "easy",
-    "type": "multiple_choice",
-    "question": "Where does digestion begin?",
-    "options": ["Mouth", "Stomach", "Small intestine", "Large intestine"],
-    "answer": "Mouth",
-    "explanation": "Chewing and saliva start breaking down food right in your mouth."
-  },
-  {
-    "id": "sci-digest-003",
-    "subject": "science",
-    "topic": "digestive_system",
-    "grade": 4,
-    "difficulty": "medium",
-    "type": "multiple_choice",
-    "question": "Which body part is a long tube where most nutrients are absorbed?",
-    "options": ["Small intestine", "Esophagus", "Liver", "Kidney"],
-    "answer": "Small intestine",
-    "explanation": "Nutrients pass through the small intestine's walls into the blood."
-  },
-  {
-    "id": "sci-digest-004",
-    "subject": "science",
-    "topic": "digestive_system",
-    "grade": 4,
-    "difficulty": "easy",
-    "type": "true_false",
-    "question": "The large intestine absorbs water from food.",
-    "options": ["True", "False"],
-    "answer": "True",
-    "explanation": "The large intestine soaks up water and forms the leftover waste."
-  },
-  {
-    "id": "sci-digest-005",
-    "subject": "science",
-    "topic": "digestive_system",
-    "grade": 4,
-    "difficulty": "medium",
-    "type": "fill_blank",
-    "question": "The tube that carries food from your mouth to your stomach is the ___.",
-    "options": ["esophagus", "heart", "lungs"],
-    "answer": "esophagus",
-    "explanation": "Muscles in the esophagus squeeze food down to the stomach."
-  },
-  {
-    "id": "sci-digest-006",
-    "subject": "science",
-    "topic": "digestive_system",
-    "grade": 4,
-    "difficulty": "easy",
-    "type": "multiple_choice",
-    "question": "What helps break food into smaller pieces by chewing?",
-    "options": ["Teeth", "Tongue", "Tonsils", "Throat"],
-    "answer": "Teeth",
-    "explanation": "Teeth grind food so it's easier to swallow and digest."
-  },
-  {
-    "id": "sci-circ-001",
-    "subject": "science",
-    "topic": "circulatory_system",
-    "grade": 4,
-    "difficulty": "easy",
-    "type": "multiple_choice",
-    "question": "Which organ pumps blood around your body?",
-    "options": ["Heart", "Lungs", "Stomach", "Liver"],
-    "answer": "Heart",
-    "explanation": "The heart is a muscle that pumps blood every second, all day."
-  },
-  {
-    "id": "sci-circ-002",
-    "subject": "science",
-    "topic": "circulatory_system",
-    "grade": 4,
-    "difficulty": "easy",
-    "type": "multiple_choice",
-    "question": "What red liquid carries oxygen and nutrients to your body?",
-    "options": ["Blood", "Water", "Saliva", "Sweat"],
-    "answer": "Blood",
-    "explanation": "Blood delivers oxygen and food to every part of you."
-  },
-  {
-    "id": "sci-circ-003",
-    "subject": "science",
-    "topic": "circulatory_system",
-    "grade": 4,
-    "difficulty": "medium",
-    "type": "true_false",
-    "question": "Veins carry blood back to the heart.",
-    "options": ["True", "False"],
-    "answer": "True",
-    "explanation": "Veins bring blood back; arteries carry it away from the heart."
-  },
-  {
-    "id": "sci-circ-004",
-    "subject": "science",
-    "topic": "circulatory_system",
-    "grade": 4,
-    "difficulty": "medium",
-    "type": "multiple_choice",
-    "question": "How many chambers (rooms) does the human heart have?",
-    "options": ["2", "3", "4", "5"],
-    "answer": "4",
-    "explanation": "Two on top, two on the bottom — four chambers in all."
-  },
-  {
-    "id": "sci-circ-005",
-    "subject": "science",
-    "topic": "circulatory_system",
-    "grade": 4,
-    "difficulty": "medium",
-    "type": "fill_blank",
-    "question": "Blood travels through tiny tubes called blood ___.",
-    "options": ["vessels", "bones", "muscles"],
-    "answer": "vessels",
-    "explanation": "Arteries, veins, and capillaries are all blood vessels."
-  },
-  {
-    "id": "sci-circ-006",
-    "subject": "science",
-    "topic": "circulatory_system",
-    "grade": 4,
-    "difficulty": "easy",
-    "type": "multiple_choice",
-    "question": "What gas does blood pick up from the lungs to carry to the body?",
-    "options": ["Oxygen", "Carbon dioxide", "Helium", "Smoke"],
-    "answer": "Oxygen",
-    "explanation": "Blood grabs oxygen in the lungs and drops off carbon dioxide."
-  },
-  {
     "id": "sci-musc-001",
     "subject": "science",
     "topic": "muscular_system",
     "grade": 4,
     "difficulty": "easy",
     "type": "multiple_choice",
-    "question": "What pulls on your bones to help your body move?",
-    "options": ["Muscles", "Skin", "Blood", "Nerves"],
-    "answer": "Muscles",
-    "explanation": "Muscles tighten and pull bones so you can move."
+    "question": "About how many muscles does the human body have?",
+    "options": ["More than 700", "About 50", "About 200", "About 2,000"],
+    "answer": "More than 700",
+    "explanation": "Your body has more than 700 muscles that help you move, stay stable, and stay supported."
   },
   {
     "id": "sci-musc-002",
@@ -163,10 +18,10 @@
     "grade": 4,
     "difficulty": "easy",
     "type": "true_false",
-    "question": "The heart is a muscle.",
+    "question": "Voluntary muscles are muscles you can control on purpose, like when you smile or wave your hand.",
     "options": ["True", "False"],
     "answer": "True",
-    "explanation": "The heart is a special muscle that never gets tired."
+    "explanation": "Voluntary muscles move when you decide to move them — like smiling, waving, or walking."
   },
   {
     "id": "sci-musc-003",
@@ -175,10 +30,11 @@
     "grade": 4,
     "difficulty": "medium",
     "type": "multiple_choice",
-    "question": "Muscles are attached to bones by strong cords called ___.",
-    "options": ["Tendons", "Ligaments", "Nerves", "Veins"],
-    "answer": "Tendons",
-    "explanation": "Tendons connect muscle to bone like tough ropes."
+    "question": "Which type of muscle movement can you NOT control on purpose, like your heartbeat?",
+    "options": ["Involuntary muscles", "Voluntary muscles", "Skeletal muscles", "Smooth muscles"],
+    "answer": "Involuntary muscles",
+    "explanation": "Involuntary muscles, like your heartbeat, work automatically — you don't have to think about them.",
+    "hint": "Your heart never asks permission to beat."
   },
   {
     "id": "sci-musc-004",
@@ -186,35 +42,50 @@
     "topic": "muscular_system",
     "grade": 4,
     "difficulty": "medium",
-    "type": "multiple_choice",
-    "question": "When a muscle contracts, what happens to it?",
-    "options": ["It gets shorter and pulls", "It gets longer and pushes", "It disappears", "It turns to bone"],
-    "answer": "It gets shorter and pulls",
-    "explanation": "A muscle shortens to pull the bone and create movement."
+    "type": "matching",
+    "question": "Match each muscle type to its description.",
+    "pairs": [
+      { "term": "Skeletal Muscles", "match": "Attached to bones and mostly voluntary" },
+      { "term": "Smooth Muscles", "match": "Found in organs like the stomach and intestines" },
+      { "term": "Cardiac Muscles", "match": "Found only in the walls of the heart" }
+    ],
+    "explanation": "Each type of muscle has its own job — some move your bones, some work inside your organs, and one only works in your heart."
   },
   {
     "id": "sci-musc-005",
     "subject": "science",
     "topic": "muscular_system",
     "grade": 4,
-    "difficulty": "easy",
-    "type": "true_false",
-    "question": "Muscles you control on purpose, like walking, are called voluntary muscles.",
-    "options": ["True", "False"],
-    "answer": "True",
-    "explanation": "Voluntary muscles move when you decide to move them."
+    "difficulty": "medium",
+    "type": "fill_blank",
+    "question": "Skeletal muscles work in ___ to move a bone — like the biceps and triceps in your arm.",
+    "options": ["pairs", "rows", "circles"],
+    "answer": "pairs",
+    "explanation": "Muscles like your biceps and triceps work in pairs — when one contracts, the other relaxes."
   },
   {
     "id": "sci-musc-006",
     "subject": "science",
     "topic": "muscular_system",
     "grade": 4,
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "question": "When you bend your arm to flex, what happens to your biceps muscle?",
+    "options": ["It contracts (tightens)", "It relaxes", "It turns into bone", "It disappears"],
+    "answer": "It contracts (tightens)",
+    "explanation": "When you flex, your biceps contracts while your triceps relaxes on the other side."
+  },
+  {
+    "id": "sci-musc-007",
+    "subject": "science",
+    "topic": "muscular_system",
+    "grade": 4,
     "difficulty": "easy",
-    "type": "fill_blank",
-    "question": "You use your ___ muscles to smile.",
-    "options": ["face", "leg", "hand"],
-    "answer": "face",
-    "explanation": "Many small face muscles work together when you smile."
+    "type": "multiple_choice",
+    "question": "Which of these is a function of your muscular and skeletal systems working together?",
+    "options": ["Making red blood cells", "Digesting your lunch", "Pumping air into your lungs", "Filtering your blood"],
+    "answer": "Making red blood cells",
+    "explanation": "Your muscles and bones work together for posture, movement, and protection — and even making red blood cells!"
   },
   {
     "id": "sci-skel-001",
@@ -223,22 +94,22 @@
     "grade": 4,
     "difficulty": "easy",
     "type": "multiple_choice",
-    "question": "What gives your body its shape and holds it up?",
-    "options": ["The skeleton (bones)", "The skin", "The blood", "The hair"],
-    "answer": "The skeleton (bones)",
-    "explanation": "Your bones form a frame that supports your whole body."
+    "question": "Which part of your skeleton includes your skull, spine, ribs, and sternum?",
+    "options": ["Axial skeleton", "Appendicular skeleton", "Cartilage skeleton", "Cardiac skeleton"],
+    "answer": "Axial skeleton",
+    "explanation": "The axial skeleton is the central part of your skeleton — skull, spine, ribs, and sternum."
   },
   {
     "id": "sci-skel-002",
     "subject": "science",
     "topic": "skeletal_system",
     "grade": 4,
-    "difficulty": "medium",
+    "difficulty": "easy",
     "type": "multiple_choice",
-    "question": "About how many bones are in a grown-up's body?",
-    "options": ["106", "206", "306", "406"],
-    "answer": "206",
-    "explanation": "Adults have 206 bones; babies are born with even more."
+    "question": "Which part of your skeleton includes the bones of your arms, hands, legs, and feet?",
+    "options": ["Appendicular skeleton", "Axial skeleton", "Spongy skeleton", "Cartilage skeleton"],
+    "answer": "Appendicular skeleton",
+    "explanation": "Your arms, hands, legs, and feet are all part of the appendicular skeleton."
   },
   {
     "id": "sci-skel-003",
@@ -246,23 +117,23 @@
     "topic": "skeletal_system",
     "grade": 4,
     "difficulty": "easy",
-    "type": "multiple_choice",
-    "question": "Which bone protects your brain?",
-    "options": ["Skull", "Ribs", "Spine", "Pelvis"],
-    "answer": "Skull",
-    "explanation": "The hard skull is like a helmet for your brain."
+    "type": "fill_blank",
+    "question": "A ___ is a rigid organ that forms the skeleton of the body.",
+    "options": ["bone", "muscle", "tendon"],
+    "answer": "bone",
+    "explanation": "Bones are rigid organs made of collagen fibers and mineral salts like calcium and phosphorus."
   },
   {
     "id": "sci-skel-004",
     "subject": "science",
     "topic": "skeletal_system",
     "grade": 4,
-    "difficulty": "easy",
+    "difficulty": "medium",
     "type": "true_false",
-    "question": "The ribs protect your heart and lungs.",
+    "question": "Bone marrow is the soft, jelly-like substance inside bones that makes blood cells.",
     "options": ["True", "False"],
     "answer": "True",
-    "explanation": "The rib cage is a bony shield around your heart and lungs."
+    "explanation": "Bone marrow is found in the spongy part of your bones and manufactures blood cells."
   },
   {
     "id": "sci-skel-005",
@@ -270,11 +141,11 @@
     "topic": "skeletal_system",
     "grade": 4,
     "difficulty": "medium",
-    "type": "fill_blank",
-    "question": "The place where two bones meet is called a ___.",
-    "options": ["joint", "muscle", "vein"],
-    "answer": "joint",
-    "explanation": "Joints like your knees and elbows let bones bend and move."
+    "type": "multiple_choice",
+    "question": "What is the hard outer layer of bone that gives it strength and protection?",
+    "options": ["Compact bone", "Spongy bone", "Cartilage", "Ligament"],
+    "answer": "Compact bone",
+    "explanation": "Compact bone is the tough outer layer that protects the softer spongy bone inside."
   },
   {
     "id": "sci-skel-006",
@@ -282,42 +153,333 @@
     "topic": "skeletal_system",
     "grade": 4,
     "difficulty": "medium",
-    "type": "multiple_choice",
-    "question": "What soft part inside bones helps make blood cells?",
-    "options": ["Bone marrow", "Cartilage", "Tendon", "Ligament"],
-    "answer": "Bone marrow",
-    "explanation": "Bone marrow is a soft center that produces new blood cells."
+    "type": "true_false",
+    "question": "Tendons are strong, cordlike tissues that connect skeletal muscles to bones.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "Tendons connect your muscles to your bones so your muscles can pull and move them."
   },
   {
-    "id": "sci-body-match-001",
+    "id": "sci-skel-007",
+    "subject": "science",
+    "topic": "skeletal_system",
+    "grade": 4,
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "question": "What holds two bones together at a joint?",
+    "options": ["Ligaments", "Tendons", "Cartilage", "Bone marrow"],
+    "answer": "Ligaments",
+    "explanation": "Ligaments are tough, stretchy cords that hold your bones together at each joint."
+  },
+  {
+    "id": "sci-skel-008",
+    "subject": "science",
+    "topic": "skeletal_system",
+    "grade": 4,
+    "difficulty": "hard",
+    "type": "matching",
+    "question": "Match each skeletal term to its description.",
+    "pairs": [
+      { "term": "Cartilage", "match": "Flexible tissue that keeps bones from rubbing together" },
+      { "term": "Joint", "match": "The point where two bones meet" },
+      { "term": "Tendon", "match": "Connects muscle to bone" },
+      { "term": "Ligament", "match": "Connects bone to bone and lubricates the joint" }
+    ],
+    "explanation": "Cartilage, joints, tendons, and ligaments all work together to let your skeleton move smoothly."
+  },
+  {
+    "id": "sci-digest-001",
+    "subject": "science",
+    "topic": "digestive_system",
+    "grade": 4,
+    "difficulty": "easy",
+    "type": "multiple_choice",
+    "question": "What do we call the process of putting food into your mouth?",
+    "options": ["Ingestion", "Digestion", "Absorption", "Elimination"],
+    "answer": "Ingestion",
+    "explanation": "Ingestion is simply the act of putting food into your mouth to start the digestive process."
+  },
+  {
+    "id": "sci-digest-002",
     "subject": "science",
     "topic": "digestive_system",
     "grade": 4,
     "difficulty": "medium",
     "type": "matching",
-    "question": "Match each digestive part to what it does.",
+    "question": "Match each digestive process to what it means.",
     "pairs": [
-      { "term": "Stomach", "match": "Breaks down food with acid" },
-      { "term": "Esophagus", "match": "Tube to the stomach" },
-      { "term": "Small intestine", "match": "Absorbs nutrients" },
-      { "term": "Large intestine", "match": "Absorbs water" }
+      { "term": "Ingestion", "match": "Putting food into your mouth" },
+      { "term": "Digestion", "match": "Breaking food into small molecules" },
+      { "term": "Absorption", "match": "Nutrients pass into your blood" },
+      { "term": "Elimination", "match": "Waste leaves the body as feces" }
     ],
-    "explanation": "Each part of the digestive system has its own job as food travels through your body."
+    "explanation": "Your digestive system does four jobs in order: ingestion, digestion, absorption, and elimination."
   },
   {
-    "id": "sci-body-match-002",
+    "id": "sci-digest-003",
     "subject": "science",
-    "topic": "skeletal_system",
+    "topic": "digestive_system",
     "grade": 4,
     "difficulty": "medium",
-    "type": "matching",
-    "question": "Match each bone to what it protects or does.",
-    "pairs": [
-      { "term": "Skull", "match": "Protects the brain" },
-      { "term": "Ribs", "match": "Protects the heart and lungs" },
-      { "term": "Spine", "match": "Holds your body upright" },
-      { "term": "Bone marrow", "match": "Makes blood cells" }
+    "type": "true_false",
+    "question": "Peristalsis is the rhythmic, involuntary squeezing of muscles that pushes food through your digestive tract.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "Peristalsis is like a wave of muscle squeezes that moves food all the way down your digestive tract."
+  },
+  {
+    "id": "sci-digest-004",
+    "subject": "science",
+    "topic": "digestive_system",
+    "grade": 4,
+    "difficulty": "hard",
+    "type": "fill_blank",
+    "question": "The tube-like passage that food travels through — including the mouth, esophagus, stomach, and intestines — is called the ___.",
+    "options": ["alimentary canal", "blood vessel", "nerve pathway"],
+    "answer": "alimentary canal",
+    "explanation": "The alimentary canal is the long tube your food travels through during digestion.",
+    "hint": "It's also called the digestive tract."
+  },
+  {
+    "id": "sci-digest-005",
+    "subject": "science",
+    "topic": "digestive_system",
+    "grade": 4,
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "question": "Which of these is an accessory organ that helps digestion by making enzymes?",
+    "options": ["Liver", "Esophagus", "Stomach", "Small intestine"],
+    "answer": "Liver",
+    "explanation": "The liver, along with the pancreas, gallbladder, and salivary glands, helps digestion by making enzymes."
+  },
+  {
+    "id": "sci-digest-006",
+    "subject": "science",
+    "topic": "digestive_system",
+    "grade": 4,
+    "difficulty": "easy",
+    "type": "multiple_choice",
+    "question": "In which organ are proteins mainly broken down?",
+    "options": ["Stomach", "Mouth", "Small intestine", "Large intestine"],
+    "answer": "Stomach",
+    "explanation": "Chemical digestion of proteins mainly happens in the stomach."
+  },
+  {
+    "id": "sci-digest-007",
+    "subject": "science",
+    "topic": "digestive_system",
+    "grade": 4,
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "question": "Where does your body absorb most of its nutrients from food?",
+    "options": ["Small intestine", "Stomach", "Large intestine", "Esophagus"],
+    "answer": "Small intestine",
+    "explanation": "The small intestine finishes digestion and absorbs most of the nutrients your body needs."
+  },
+  {
+    "id": "sci-digest-008",
+    "subject": "science",
+    "topic": "digestive_system",
+    "grade": 4,
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "question": "What does the large intestine mainly absorb from leftover food?",
+    "options": ["Water", "Protein", "Sugar", "Oxygen"],
+    "answer": "Water",
+    "explanation": "The large intestine absorbs excess water from undigested food before it leaves the body as waste."
+  },
+  {
+    "id": "sci-circ-001",
+    "subject": "science",
+    "topic": "circulatory_system",
+    "grade": 4,
+    "difficulty": "easy",
+    "type": "multiple_choice",
+    "question": "Which blood cells carry oxygen and nutrients to all parts of your body?",
+    "options": ["Red blood cells", "White blood cells", "Platelets", "Blood vessels"],
+    "answer": "Red blood cells",
+    "explanation": "Red blood cells carry oxygen and nutrients everywhere your body needs them."
+  },
+  {
+    "id": "sci-circ-002",
+    "subject": "science",
+    "topic": "circulatory_system",
+    "grade": 4,
+    "difficulty": "easy",
+    "type": "multiple_choice",
+    "question": "Which blood cells help your body fight off infections and diseases?",
+    "options": ["White blood cells", "Red blood cells", "Platelets", "Capillaries"],
+    "answer": "White blood cells",
+    "explanation": "White blood cells are your body's defenders against infections and diseases."
+  },
+  {
+    "id": "sci-circ-003",
+    "subject": "science",
+    "topic": "circulatory_system",
+    "grade": 4,
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "question": "Which part of your blood forms a clot to stop bleeding?",
+    "options": ["Platelets", "Red blood cells", "White blood cells", "Arteries"],
+    "answer": "Platelets",
+    "explanation": "Platelets clump together to form a clot whenever you get a cut."
+  },
+  {
+    "id": "sci-circ-004",
+    "subject": "science",
+    "topic": "circulatory_system",
+    "grade": 4,
+    "difficulty": "medium",
+    "type": "fill_blank",
+    "question": "The ___ carry oxygen-rich blood away from your heart.",
+    "options": ["arteries", "veins", "capillaries"],
+    "answer": "arteries",
+    "explanation": "Arteries carry fresh, oxygen-rich blood away from the heart to the rest of your body."
+  },
+  {
+    "id": "sci-circ-005",
+    "subject": "science",
+    "topic": "circulatory_system",
+    "grade": 4,
+    "difficulty": "medium",
+    "type": "true_false",
+    "question": "Veins carry oxygen-poor blood back toward the heart.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "Veins bring oxygen-poor blood back to the heart so it can be sent to the lungs."
+  },
+  {
+    "id": "sci-circ-006",
+    "subject": "science",
+    "topic": "circulatory_system",
+    "grade": 4,
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "question": "What is the job of your capillaries?",
+    "options": [
+      "Let gases and nutrients pass between blood and tissues",
+      "Carry blood away from the heart",
+      "Carry blood toward the heart",
+      "Pump blood through the body"
     ],
-    "explanation": "Bones don't just hold you up — many of them protect your most important organs too."
+    "answer": "Let gases and nutrients pass between blood and tissues",
+    "explanation": "Capillaries are tiny blood vessels where gases and nutrients move between your blood and your body's tissues."
+  },
+  {
+    "id": "sci-circ-007",
+    "subject": "science",
+    "topic": "circulatory_system",
+    "grade": 4,
+    "difficulty": "hard",
+    "type": "multiple_choice",
+    "question": "About how many times per minute does a heart usually beat?",
+    "options": ["70-80", "10-20", "150-200", "300-400"],
+    "answer": "70-80",
+    "explanation": "A heart beats about 70 to 80 times every minute to pump blood through the body."
+  },
+  {
+    "id": "sci-circ-008",
+    "subject": "science",
+    "topic": "circulatory_system",
+    "grade": 4,
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "question": "What are the upper chambers of the heart called?",
+    "options": ["Atriums", "Ventricles", "Arteries", "Veins"],
+    "answer": "Atriums",
+    "explanation": "The atriums are the heart's upper chambers — they're often called the 'holding chambers.'"
+  },
+  {
+    "id": "sci-circ-009",
+    "subject": "science",
+    "topic": "circulatory_system",
+    "grade": 4,
+    "difficulty": "hard",
+    "type": "multiple_choice",
+    "question": "Which type of circulation moves oxygenated blood from the heart to the rest of the body?",
+    "options": ["Systemic circulation", "Pulmonary circulation", "Cardiac circulation", "Digestive circulation"],
+    "answer": "Systemic circulation",
+    "explanation": "Systemic circulation carries oxygen-rich blood from the heart out to the rest of your body."
+  },
+  {
+    "id": "sci-circ-010",
+    "subject": "science",
+    "topic": "circulatory_system",
+    "grade": 4,
+    "difficulty": "hard",
+    "type": "matching",
+    "question": "Match each heart or vessel part to its job.",
+    "pairs": [
+      { "term": "Atriums", "match": "Upper chambers that receive blood from the body" },
+      { "term": "Ventricles", "match": "Lower chambers that pump blood out" },
+      { "term": "Arteries", "match": "Carry oxygen-rich blood away from the heart" },
+      { "term": "Veins", "match": "Carry oxygen-poor blood toward the heart" }
+    ],
+    "explanation": "The heart's chambers and blood vessels each have a special job in keeping blood flowing through your body."
+  },
+  {
+    "id": "sci-resp-001",
+    "subject": "science",
+    "topic": "respiratory_system",
+    "grade": 4,
+    "difficulty": "easy",
+    "type": "true_false",
+    "question": "Breathing lets your body take in oxygen and release carbon dioxide.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "Breathing is how your body takes in oxygen and gets rid of carbon dioxide."
+  },
+  {
+    "id": "sci-resp-002",
+    "subject": "science",
+    "topic": "respiratory_system",
+    "grade": 4,
+    "difficulty": "medium",
+    "type": "fill_blank",
+    "question": "The respiratory system removes a waste gas from your body called ___.",
+    "options": ["carbon dioxide", "oxygen", "nutrients"],
+    "answer": "carbon dioxide",
+    "explanation": "Carbon dioxide is a waste product your body removes every time you breathe out."
+  },
+  {
+    "id": "sci-resp-003",
+    "subject": "science",
+    "topic": "respiratory_system",
+    "grade": 4,
+    "difficulty": "easy",
+    "type": "multiple_choice",
+    "question": "Which organs transport oxygen to your blood and remove carbon dioxide?",
+    "options": ["Lungs", "Heart", "Stomach", "Small intestine"],
+    "answer": "Lungs",
+    "explanation": "Your lungs are the main organs of breathing — they bring in oxygen and remove carbon dioxide."
+  },
+  {
+    "id": "sci-resp-004",
+    "subject": "science",
+    "topic": "respiratory_system",
+    "grade": 4,
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "question": "What is the diaphragm?",
+    "options": [
+      "A muscle below the lungs that helps you breathe",
+      "A bone that protects your lungs",
+      "A blood vessel inside your lungs",
+      "An enzyme that helps digest food"
+    ],
+    "answer": "A muscle below the lungs that helps you breathe",
+    "explanation": "The diaphragm is a muscle below your lungs that pulls air in and pushes air out when you breathe."
+  },
+  {
+    "id": "sci-resp-005",
+    "subject": "science",
+    "topic": "respiratory_system",
+    "grade": 4,
+    "difficulty": "easy",
+    "type": "true_false",
+    "question": "Oxygen is a gas your body's cells need to get energy from the food you eat.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "Your cells use oxygen to turn the food you eat into energy for your body."
   }
 ]
