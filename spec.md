@@ -13,11 +13,11 @@ Problem to solve:
 
 Design thesis: Memory sticks when it's attached to emotion. Every correct answer should feel like a small win (sound, animation, points, praise). Every wrong answer should feel safe and instructive (no punishment, a friendly explanation, and the question comes back later). Wrap the whole thing in a light story/theme so a "review session" feels like "playing a game."
 
-Success looks like: She asks to do a round. She finishes 20–30 questions without complaining. She remembers more the next day.
+Success looks like: She asks to do a round. She finishes 10–20 questions without complaining. She remembers more the next day.
 
 ## 2. Core Features (v1)
 
-1. Quiz rounds of 20–30 questions. Configurable round length (default 25). Questions pulled from a chosen subject + topic.
+1. Quiz rounds of 10–20 questions. Configurable round length (default 20). Questions pulled from a chosen subject + topic.
 2. Multiple question formats to keep it fresh within a round:
    - Multiple choice (4 options)
    - True / False
@@ -27,7 +27,7 @@ Success looks like: She asks to do a round. She finishes 20–30 questions witho
    - Points per correct answer.
    - Streak multiplier — consecutive correct answers boost points (3-streak, 5-streak = "On Fire!").
    - Instant celebration — confetti/animation + a happy sound on correct; a gentle, encouraging animation on wrong (never scary or negative).
-   - Progress bar for the round ("Question 12 of 25").
+   - Progress bar for the round ("Question 12 of 20").
    - Companion character that reacts (cheers, does a little dance on a streak, gives a thumbs-up on a comeback).
    - Badges / achievements — e.g. "First 100 points," "5 in a row," "Digestive System Master," "Perfect Round."
    - Level up — total points across sessions raise her level and unlock rewards (new avatar accessory, new theme color, new companion).
@@ -59,7 +59,7 @@ Home / Map Screen
   → "Start Adventure" button
       → Pick Subject (Science / Math / English / Filipino)
           → Pick Topic (e.g. Science → Digestive System)
-              → Pick Round Length (20 / 25 / 30) — default 25
+              → Pick Round Length (10 / 20) — default 20
               → Pick Mode (Normal / Challenge with timer)
                   → QUIZ ROUND
                       - question card + answer options

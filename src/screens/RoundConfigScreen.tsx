@@ -8,10 +8,10 @@ interface Props {
   onBack: () => void
 }
 
-const LENGTHS = [20, 25, 30]
+const LENGTHS = [10, 20]
 
 export default function RoundConfigScreen({ topic, onStart, onBack }: Props) {
-  const [length, setLength] = useState(25)
+  const [length, setLength] = useState(20)
   const [mode, setMode] = useState<Mode>('normal')
 
   return (
@@ -24,7 +24,7 @@ export default function RoundConfigScreen({ topic, onStart, onBack }: Props) {
 
       <div className="w-full max-w-md rounded-3xl bg-white p-6 shadow-xl">
         <p className="mb-3 font-extrabold text-slate-700">How many questions?</p>
-        <div className="mb-6 grid grid-cols-3 gap-3">
+        <div className="mb-6 grid grid-cols-2 gap-3">
           {LENGTHS.map((n) => (
             <button
               key={n}

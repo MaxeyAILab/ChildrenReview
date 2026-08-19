@@ -88,6 +88,35 @@
     "explanation": "Your muscles and bones work together for posture, movement, and protection — and even making red blood cells!"
   },
   {
+    "id": "sci-musc-008",
+    "subject": "science",
+    "topic": "muscular_system",
+    "grade": 4,
+    "difficulty": "easy",
+    "type": "multiple_choice",
+    "question": "Which of these is also a function of your musculoskeletal system?",
+    "options": [
+      "Giving your body posture, support, and shape",
+      "Digesting your lunch",
+      "Filtering your blood",
+      "Removing carbon dioxide"
+    ],
+    "answer": "Giving your body posture, support, and shape",
+    "explanation": "Your muscles and bones work together to give your body its posture, support, and shape."
+  },
+  {
+    "id": "sci-musc-009",
+    "subject": "science",
+    "topic": "muscular_system",
+    "grade": 4,
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "question": "When organs work together for a specific job, what do we call the group?",
+    "options": ["An organ system", "A tissue", "A cell", "A joint"],
+    "answer": "An organ system",
+    "explanation": "Cells form tissues, tissues form organs, and organs working together form an organ system — like your muscular system!"
+  },
+  {
     "id": "sci-skel-001",
     "subject": "science",
     "topic": "skeletal_system",
@@ -186,6 +215,30 @@
       { "term": "Ligament", "match": "Connects bone to bone and lubricates the joint" }
     ],
     "explanation": "Cartilage, joints, tendons, and ligaments all work together to let your skeleton move smoothly."
+  },
+  {
+    "id": "sci-skel-009",
+    "subject": "science",
+    "topic": "skeletal_system",
+    "grade": 4,
+    "difficulty": "hard",
+    "type": "multiple_choice",
+    "question": "What is the thin outer covering of a bone that protects its blood vessels?",
+    "options": ["Periosteum", "Cartilage", "Bone marrow", "Ligament"],
+    "answer": "Periosteum",
+    "explanation": "The periosteum is a connective tissue covering the bone that protects the blood vessels bringing it nutrients."
+  },
+  {
+    "id": "sci-skel-010",
+    "subject": "science",
+    "topic": "skeletal_system",
+    "grade": 4,
+    "difficulty": "easy",
+    "type": "true_false",
+    "question": "One job of your skeletal system is to store minerals like calcium and phosphorus.",
+    "options": ["True", "False"],
+    "answer": "True",
+    "explanation": "Your bones store important minerals such as calcium and phosphorus for your body to use."
   },
   {
     "id": "sci-digest-001",
@@ -287,6 +340,18 @@
     "options": ["Water", "Protein", "Sugar", "Oxygen"],
     "answer": "Water",
     "explanation": "The large intestine absorbs excess water from undigested food before it leaves the body as waste."
+  },
+  {
+    "id": "sci-digest-009",
+    "subject": "science",
+    "topic": "digestive_system",
+    "grade": 4,
+    "difficulty": "easy",
+    "type": "multiple_choice",
+    "question": "What do we call the physical breakdown of food, like when you bite and chew bread?",
+    "options": ["Mechanical digestion", "Chemical digestion", "Absorption", "Elimination"],
+    "answer": "Mechanical digestion",
+    "explanation": "Mechanical digestion is the physical breakdown of food, like biting and chewing, which changes its size but not what it's made of."
   },
   {
     "id": "sci-circ-001",
@@ -416,6 +481,35 @@
       { "term": "Veins", "match": "Carry oxygen-poor blood toward the heart" }
     ],
     "explanation": "The heart's chambers and blood vessels each have a special job in keeping blood flowing through your body."
+  },
+  {
+    "id": "sci-circ-011",
+    "subject": "science",
+    "topic": "circulatory_system",
+    "grade": 4,
+    "difficulty": "medium",
+    "type": "multiple_choice",
+    "question": "About what size is the human heart?",
+    "options": [
+      "About the size of your closed fist",
+      "About the size of a grain of rice",
+      "About the size of a basketball",
+      "About the size of your whole hand spread out"
+    ],
+    "answer": "About the size of your closed fist",
+    "explanation": "The heart is a muscular organ about the size of your closed fist, located in the center of your chest."
+  },
+  {
+    "id": "sci-circ-012",
+    "subject": "science",
+    "topic": "circulatory_system",
+    "grade": 4,
+    "difficulty": "hard",
+    "type": "multiple_choice",
+    "question": "Which type of circulation moves blood from the heart into the lungs?",
+    "options": ["Pulmonary circulation", "Systemic circulation", "Digestive circulation", "Skeletal circulation"],
+    "answer": "Pulmonary circulation",
+    "explanation": "Pulmonary circulation moves blood from the heart into the lungs to pick up oxygen."
   },
   {
     "id": "sci-resp-001",
