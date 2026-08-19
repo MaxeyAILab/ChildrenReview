@@ -32,6 +32,7 @@ export default function QuizRoundScreen({ subject, topic, length, mode, progress
   const [streak, setStreak] = useState(0)
   const [bestStreakRound, setBestStreakRound] = useState(0)
   const [correctCount, setCorrectCount] = useState(0)
+  const [wrongCount, setWrongCount] = useState(0)
   const [mood, setMood] = useState<CompanionMood>('idle')
   const requeuedIds = useRef(new Set<string>())
   const missedIdsThisRound = useRef(new Set<string>())
@@ -70,6 +71,7 @@ export default function QuizRoundScreen({ subject, topic, length, mode, progress
       lastWasWrong.current = false
     } else {
       setStreak(0)
+      setWrongCount((c) => c + 1)
       if (progress.soundOn) playWrong()
       setMood('sad')
       lastWasWrong.current = true
@@ -149,7 +151,7 @@ export default function QuizRoundScreen({ subject, topic, length, mode, progress
 
   return (
     <div className="flex min-h-full flex-col items-center px-4 py-6">
-      <div className="mb-4 flex w-full max-w-2xl items-center justify-between">
+      <div className="mb-3 flex w-full max-w-2xl items-center justify-between">
         <button onClick={onExit} className="rounded-full bg-white/80 px-4 py-2 text-sm font-bold shadow">
           ✕ Quit
         </button>
@@ -158,6 +160,15 @@ export default function QuizRoundScreen({ subject, topic, length, mode, progress
             🔥 {streak} streak!
           </span>
         )}
+      </div>
+
+      <div className="mb-4 flex w-full max-w-2xl items-center justify-center gap-3">
+        <span className="rounded-full bg-emerald-400 px-3 py-1 text-sm font-black text-white shadow">
+          ✅ {correctCount}/{length} correct
+        </span>
+        <span className="rounded-full bg-orange-400 px-3 py-1 text-sm font-black text-white shadow">
+          ❌ {wrongCount}/{length} wrong
+        </span>
       </div>
 
       <div className="mb-4 w-full max-w-2xl">
