@@ -1,6 +1,11 @@
 import type { ShopItem } from '../types'
 
 export const SHOP_ITEMS: ShopItem[] = [
+  { id: 'base-fox', slot: 'base', label: 'Fox (Starter)', emoji: '🦊', cost: 0 },
+  { id: 'base-gardevoir', slot: 'base', label: 'Gardevoir', emoji: '🧚', cost: 220 },
+  { id: 'base-gengar', slot: 'base', label: 'Gengar', emoji: '👻', cost: 220 },
+  { id: 'base-charizard', slot: 'base', label: 'Charizard', emoji: '🐉', cost: 280 },
+
   { id: 'hat-party', slot: 'hat', label: 'Party Hat', emoji: '🥳', cost: 60 },
   { id: 'hat-cap', slot: 'hat', label: 'Cool Cap', emoji: '🧢', cost: 90 },
   { id: 'hat-grad', slot: 'hat', label: 'Grad Cap', emoji: '🎓', cost: 140 },
@@ -18,6 +23,7 @@ export const SHOP_ITEMS: ShopItem[] = [
 ]
 
 export const SLOT_LABELS: Record<string, string> = {
+  base: 'Avatars',
   hat: 'Hats',
   accessory: 'Accessories',
   background: 'Backgrounds',

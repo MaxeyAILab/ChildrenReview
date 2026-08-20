@@ -44,7 +44,7 @@ export interface TopicStat {
   total: number
 }
 
-export type AvatarSlot = 'hat' | 'accessory' | 'background'
+export type AvatarSlot = 'base' | 'hat' | 'accessory' | 'background'
 
 export interface ShopItem {
   id: string

@@ -4,13 +4,7 @@ import { findItem } from '../data/shopItems'
 
 export type CompanionMood = 'idle' | 'happy' | 'streak' | 'sad' | 'comeback'
 
-const FACE: Record<CompanionMood, string> = {
-  idle: '🦊',
-  happy: '🦊',
-  streak: '🦊',
-  sad: '🦊',
-  comeback: '🦊',
-}
+const DEFAULT_FACE = '🦊'
 
 const BUBBLE: Record<CompanionMood, string | null> = {
   idle: null,
@@ -36,9 +30,11 @@ export default function Companion({ mood = 'idle', equipped, size = 'md' }: Prop
           ? { rotate: [0, -4, 4, 0] }
           : { y: [0, -4, 0] }
 
+  const base = findItem(equipped?.base)
   const hat = findItem(equipped?.hat)
   const accessory = findItem(equipped?.accessory)
   const background = findItem(equipped?.background)
+  const face = base?.emoji ?? DEFAULT_FACE
 
   const ringSize = size === 'lg' ? 'h-32 w-32' : 'h-24 w-24'
   const faceSize = size === 'lg' ? 'text-7xl' : 'text-6xl'
@@ -75,7 +71,7 @@ export default function Companion({ mood = 'idle', equipped, size = 'md' }: Prop
           transition={{ duration: mood === 'idle' ? 2 : 0.6, repeat: mood === 'idle' ? Infinity : 0, ease: 'easeInOut' }}
           className={`${faceSize} drop-shadow-lg select-none`}
         >
-          {FACE[mood]}
+          {face}
         </motion.div>
         {accessory && (
           <span className="absolute -right-1 bottom-0 text-2xl drop-shadow" aria-hidden>

@@ -10,18 +10,33 @@ interface Props {
   onBack: () => void
 }
 
-const SLOTS: AvatarSlot[] = ['hat', 'accessory', 'background']
+const SLOTS: AvatarSlot[] = ['base', 'hat', 'accessory', 'background']
+const PURCHASABLE_COUNT = SHOP_ITEMS.filter((i) => i.cost > 0).length
+
+function isOwned(item: ShopItem, progress: Progress) {
+  return item.cost === 0 || progress.ownedItems.includes(item.id)
+}
+
+function isEquipped(item: ShopItem, progress: Progress) {
+  if (item.slot === 'base') {
+    return (progress.equipped.base ?? 'base-fox') === item.id
+  }
+  return progress.equipped[item.slot] === item.id
+}
 
 export default function AvatarShopScreen({ progress, updateProgress, onBack }: Props) {
   function handleItemTap(item: ShopItem) {
-    const owned = progress.ownedItems.includes(item.id)
-    const equipped = progress.equipped[item.slot] === item.id
+    const owned = isOwned(item, progress)
+    const equipped = isEquipped(item, progress)
 
     if (owned) {
+      // The base character always has exactly one selection — tapping it just switches, never unequips.
+      if (item.slot === 'base' && equipped) return
+
       if (progress.soundOn) playTap()
       updateProgress((prev) => ({
         ...prev,
-        equipped: { ...prev.equipped, [item.slot]: equipped ? undefined : item.id },
+        equipped: { ...prev.equipped, [item.slot]: item.slot === 'base' ? item.id : equipped ? undefined : item.id },
       }))
       return
     }
@@ -56,8 +71,8 @@ export default function AvatarShopScreen({ progress, updateProgress, onBack }: P
             <h2 className="mb-3 text-lg font-extrabold text-white drop-shadow-sm">{SLOT_LABELS[slot]}</h2>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
               {itemsForSlot(slot).map((item) => {
-                const owned = progress.ownedItems.includes(item.id)
-                const equipped = progress.equipped[item.slot] === item.id
+                const owned = isOwned(item, progress)
+                const equipped = isEquipped(item, progress)
                 const affordable = progress.coins >= item.cost
 
                 return (
@@ -83,7 +98,7 @@ export default function AvatarShopScreen({ progress, updateProgress, onBack }: P
                     )}
                     <span className="text-center text-xs font-extrabold leading-tight">{item.label}</span>
                     <span className="text-xs font-bold">
-                      {equipped ? '✓ Equipped' : owned ? 'Tap to equip' : `🪙 ${item.cost}`}
+                      {equipped ? '✓ Equipped' : owned ? 'Tap to equip' : item.cost === 0 ? 'Free' : `🪙 ${item.cost}`}
                     </span>
                   </motion.button>
                 )
@@ -94,7 +109,7 @@ export default function AvatarShopScreen({ progress, updateProgress, onBack }: P
       </div>
 
       <p className="mt-6 max-w-sm text-center text-xs font-semibold text-white/80">
-        Owned items: {progress.ownedItems.length} / {SHOP_ITEMS.length} — earn coins by answering correctly in quiz rounds!
+        Owned items: {progress.ownedItems.length} / {PURCHASABLE_COUNT} — earn coins by answering correctly in quiz rounds!
       </p>
     </div>
   )
