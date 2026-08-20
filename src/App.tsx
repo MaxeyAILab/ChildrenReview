@@ -2,6 +2,7 @@ import { useState } from 'react'
 import type { Mode, RoundResult, Screen, Subject, TopicMeta } from './types'
 import { useProgress } from './hooks/useProgress'
 import HomeScreen from './screens/HomeScreen'
+import AvatarShopScreen from './screens/AvatarShopScreen'
 import SubjectPickerScreen from './screens/SubjectPickerScreen'
 import TopicPickerScreen from './screens/TopicPickerScreen'
 import RoundConfigScreen from './screens/RoundConfigScreen'
@@ -20,7 +21,16 @@ export default function App() {
     <div className="min-h-screen w-full bg-gradient-to-b from-sky-400 via-sky-300 to-emerald-300">
       <div className="relative mx-auto min-h-screen w-full max-w-3xl">
         {screen.name === 'home' && (
-          <HomeScreen progress={progress} onStart={() => setScreen({ name: 'subject' })} onToggleSound={toggleSound} />
+          <HomeScreen
+            progress={progress}
+            onStart={() => setScreen({ name: 'subject' })}
+            onOpenShop={() => setScreen({ name: 'shop' })}
+            onToggleSound={toggleSound}
+          />
+        )}
+
+        {screen.name === 'shop' && (
+          <AvatarShopScreen progress={progress} updateProgress={updateProgress} onBack={() => setScreen({ name: 'home' })} />
         )}
 
         {screen.name === 'subject' && (
@@ -66,6 +76,7 @@ export default function App() {
           <RoundSummaryScreen
             result={screen.result}
             soundOn={progress.soundOn}
+            equipped={progress.equipped}
             onPlayAgain={() => {
               const meta: TopicMeta = { key: screen.result.topic, label: screen.result.topicLabel, icon: '', available: true }
               setScreen({ name: 'config', subject: screen.result.subject, topic: meta })

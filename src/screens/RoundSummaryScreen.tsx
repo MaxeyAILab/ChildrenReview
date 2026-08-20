@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { motion } from 'framer-motion'
-import type { RoundResult } from '../types'
+import type { Progress, RoundResult } from '../types'
 import { BADGES, topicMasterBadge } from '../lib/gameLogic'
 import { playLevelUp } from '../lib/sound'
 import { bigConfetti } from '../lib/confetti'
@@ -9,6 +9,7 @@ import Companion from '../components/Companion'
 interface Props {
   result: RoundResult
   soundOn: boolean
+  equipped: Progress['equipped']
   onPlayAgain: () => void
   onNewTopic: () => void
   onHome: () => void
@@ -20,7 +21,7 @@ const MESSAGES: Record<1 | 2 | 3, string> = {
   1: "Nice Try! Let's review and try again! 💪",
 }
 
-export default function RoundSummaryScreen({ result, soundOn, onPlayAgain, onNewTopic, onHome }: Props) {
+export default function RoundSummaryScreen({ result, soundOn, equipped, onPlayAgain, onNewTopic, onHome }: Props) {
   useEffect(() => {
     bigConfetti()
     if (result.leveledUp && soundOn) playLevelUp()
@@ -45,7 +46,7 @@ export default function RoundSummaryScreen({ result, soundOn, onPlayAgain, onNew
         <p className="mb-3 font-bold text-emerald-600">{MESSAGES[result.stars]}</p>
 
         <div className="flex justify-center">
-          <Companion mood={result.stars === 3 ? 'streak' : 'happy'} />
+          <Companion mood={result.stars === 3 ? 'streak' : 'happy'} equipped={equipped} />
         </div>
 
         <div className="mt-2 flex justify-center gap-2 text-5xl">
@@ -70,6 +71,7 @@ export default function RoundSummaryScreen({ result, soundOn, onPlayAgain, onNew
           <div className="grid grid-cols-2 gap-4 text-left">
             <Stat label="Best Streak" value={`🔥 ${result.bestStreak}`} />
             <Stat label="Points Earned" value={`+${result.pointsEarned}`} />
+            <Stat label="Coins Earned" value={`🪙 +${result.coinsEarned}`} />
             <Stat label="Topic" value={result.topicLabel} />
           </div>
         </div>

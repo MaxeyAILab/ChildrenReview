@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import type { Question } from '../types'
 import { shuffle } from '../lib/quizEngine'
@@ -11,6 +11,8 @@ interface Props {
 }
 
 type Phase = 'answering' | 'feedback'
+
+const LETTERS = ['A', 'B', 'C', 'D']
 
 export default function QuestionCard({ question, onAnswered, onContinue, timerSeconds }: Props) {
   const [phase, setPhase] = useState<Phase>('answering')
@@ -25,6 +27,8 @@ export default function QuestionCard({ question, onAnswered, onContinue, timerSe
   const [mistakeMade, setMistakeMade] = useState(false)
   const [shakeMatch, setShakeMatch] = useState<string | null>(null)
   const [matchOrder] = useState(() => (question.pairs ? shuffle(question.pairs.map((p) => p.match)) : []))
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const shuffledOptions = useMemo(() => shuffle(question.options ?? []), [question.id])
 
   useEffect(() => {
     setPhase('answering')
@@ -137,14 +141,22 @@ export default function QuestionCard({ question, onAnswered, onContinue, timerSe
 
         {isChoice && (
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-            {question.options?.map((opt) => {
+            {shuffledOptions.map((opt, i) => {
               const isSelected = selected === opt
               const isAnswerOpt = opt.trim().toLowerCase() === (question.answer ?? '').trim().toLowerCase()
               let style = 'bg-slate-100 text-slate-800 hover:bg-slate-200'
+              let letterStyle = 'bg-slate-300 text-slate-700'
               if (phase === 'feedback') {
-                if (isAnswerOpt) style = 'bg-emerald-400 text-white'
-                else if (isSelected) style = 'bg-orange-300 text-white'
-                else style = 'bg-slate-100 text-slate-400'
+                if (isAnswerOpt) {
+                  style = 'bg-emerald-400 text-white'
+                  letterStyle = 'bg-emerald-600 text-white'
+                } else if (isSelected) {
+                  style = 'bg-orange-300 text-white'
+                  letterStyle = 'bg-orange-500 text-white'
+                } else {
+                  style = 'bg-slate-100 text-slate-400'
+                  letterStyle = 'bg-slate-200 text-slate-400'
+                }
               }
               return (
                 <motion.button
@@ -152,8 +164,11 @@ export default function QuestionCard({ question, onAnswered, onContinue, timerSe
                   whileTap={{ scale: 0.96 }}
                   disabled={phase === 'feedback'}
                   onClick={() => chooseOption(opt)}
-                  className={`min-h-16 rounded-2xl px-5 py-4 text-left text-lg font-bold shadow-sm transition-colors ${style}`}
+                  className={`flex min-h-16 items-center gap-3 rounded-2xl px-5 py-4 text-left text-lg font-bold shadow-sm transition-colors ${style}`}
                 >
+                  <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-black transition-colors ${letterStyle}`}>
+                    {LETTERS[i]}
+                  </span>
                   {opt}
                 </motion.button>
               )

@@ -1,6 +1,6 @@
 # Brainy Quest
 
-A game-style quiz reviewer for a Grade 4 student (DepEd-aligned), built to turn review sessions into an exciting adventure. Correct answers earn points, streaks, confetti, and badges; wrong answers get a gentle explanation and a chance to try again — never punishment.
+A game-style quiz reviewer for a Grade 4 student (DepEd-aligned), built to turn review sessions into an exciting adventure. Correct answers earn points, coins, streaks, confetti, and badges; wrong answers get a gentle explanation and a chance to try again — never punishment. Coins can be spent in the Avatar Shop on hats, accessories, and backgrounds for the companion.
 
 ## Stack
 

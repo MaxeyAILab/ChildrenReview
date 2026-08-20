@@ -44,13 +44,27 @@ export interface TopicStat {
   total: number
 }
 
+export type AvatarSlot = 'hat' | 'accessory' | 'background'
+
+export interface ShopItem {
+  id: string
+  slot: AvatarSlot
+  label: string
+  emoji?: string
+  gradient?: string
+  cost: number
+}
+
 export interface Progress {
   points: number
+  coins: number
   bestStreak: number
   badges: string[]
   topicStats: Record<string, TopicStat>
   missedQueue: Record<string, string[]>
   soundOn: boolean
+  ownedItems: string[]
+  equipped: Partial<Record<AvatarSlot, string>>
 }
 
 export interface RoundResult {
@@ -61,6 +75,7 @@ export interface RoundResult {
   correct: number
   bestStreak: number
   pointsEarned: number
+  coinsEarned: number
   stars: 1 | 2 | 3
   newBadges: string[]
   leveledUp: boolean
@@ -71,6 +86,7 @@ export type Mode = 'normal' | 'challenge'
 
 export type Screen =
   | { name: 'home' }
+  | { name: 'shop' }
   | { name: 'subject' }
   | { name: 'topic'; subject: Subject }
   | { name: 'config'; subject: Subject; topic: TopicMeta }

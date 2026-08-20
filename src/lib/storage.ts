@@ -4,11 +4,14 @@ const STORAGE_KEY = 'brainy-quest-progress-v1'
 
 const defaultProgress: Progress = {
   points: 0,
+  coins: 0,
   bestStreak: 0,
   badges: [],
   topicStats: {},
   missedQueue: {},
   soundOn: true,
+  ownedItems: [],
+  equipped: {},
 }
 
 export function loadProgress(): Progress {

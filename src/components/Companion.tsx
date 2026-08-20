@@ -1,4 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion'
+import type { Progress } from '../types'
+import { findItem } from '../data/shopItems'
 
 export type CompanionMood = 'idle' | 'happy' | 'streak' | 'sad' | 'comeback'
 
@@ -18,7 +20,13 @@ const BUBBLE: Record<CompanionMood, string | null> = {
   comeback: "There you go!",
 }
 
-export default function Companion({ mood = 'idle' }: { mood?: CompanionMood }) {
+interface Props {
+  mood?: CompanionMood
+  equipped?: Progress['equipped']
+  size?: 'md' | 'lg'
+}
+
+export default function Companion({ mood = 'idle', equipped, size = 'md' }: Props) {
   const animation =
     mood === 'streak'
       ? { rotate: [0, -12, 12, -8, 8, 0], scale: [1, 1.2, 1.2, 1.15, 1.15, 1] }
@@ -27,6 +35,13 @@ export default function Companion({ mood = 'idle' }: { mood?: CompanionMood }) {
         : mood === 'sad'
           ? { rotate: [0, -4, 4, 0] }
           : { y: [0, -4, 0] }
+
+  const hat = findItem(equipped?.hat)
+  const accessory = findItem(equipped?.accessory)
+  const background = findItem(equipped?.background)
+
+  const ringSize = size === 'lg' ? 'h-32 w-32' : 'h-24 w-24'
+  const faceSize = size === 'lg' ? 'text-7xl' : 'text-6xl'
 
   return (
     <div className="relative flex flex-col items-center">
@@ -43,14 +58,31 @@ export default function Companion({ mood = 'idle' }: { mood?: CompanionMood }) {
           </motion.div>
         )}
       </AnimatePresence>
-      <motion.div
-        key={mood}
-        animate={animation}
-        transition={{ duration: mood === 'idle' ? 2 : 0.6, repeat: mood === 'idle' ? Infinity : 0, ease: 'easeInOut' }}
-        className="text-6xl drop-shadow-lg select-none"
+
+      <div
+        className={`relative flex items-center justify-center rounded-full ${ringSize} ${
+          background ? `bg-gradient-to-br ${background.gradient}` : ''
+        }`}
       >
-        {FACE[mood]}
-      </motion.div>
+        {hat && (
+          <span className="absolute -top-3 text-3xl drop-shadow" aria-hidden>
+            {hat.emoji}
+          </span>
+        )}
+        <motion.div
+          key={mood}
+          animate={animation}
+          transition={{ duration: mood === 'idle' ? 2 : 0.6, repeat: mood === 'idle' ? Infinity : 0, ease: 'easeInOut' }}
+          className={`${faceSize} drop-shadow-lg select-none`}
+        >
+          {FACE[mood]}
+        </motion.div>
+        {accessory && (
+          <span className="absolute -right-1 bottom-0 text-2xl drop-shadow" aria-hidden>
+            {accessory.emoji}
+          </span>
+        )}
+      </div>
     </div>
   )
 }

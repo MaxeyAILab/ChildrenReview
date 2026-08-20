@@ -6,10 +6,11 @@ import { BADGES, pointsToNextLevel } from '../lib/gameLogic'
 interface Props {
   progress: Progress
   onStart: () => void
+  onOpenShop: () => void
   onToggleSound: () => void
 }
 
-export default function HomeScreen({ progress, onStart, onToggleSound }: Props) {
+export default function HomeScreen({ progress, onStart, onOpenShop, onToggleSound }: Props) {
   const { current, needed, level } = pointsToNextLevel(progress.points)
   const pct = needed === 0 ? 100 : Math.min(100, (current / needed) * 100)
 
@@ -26,9 +27,14 @@ export default function HomeScreen({ progress, onStart, onToggleSound }: Props) 
       <h1 className="mb-1 text-4xl font-black tracking-tight text-white drop-shadow-sm sm:text-5xl">Brainy Quest</h1>
       <p className="mb-6 font-bold text-white/90">Your adventure awaits!</p>
 
-      <Companion mood="idle" />
+      <button onClick={onOpenShop} className="group relative">
+        <Companion mood="idle" equipped={progress.equipped} />
+        <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 rounded-full bg-amber-300 px-2 py-0.5 text-xs font-black text-amber-900 shadow group-active:scale-95">
+          🪙 {progress.coins}
+        </span>
+      </button>
 
-      <div className="mt-6 w-full max-w-sm rounded-3xl bg-white/95 p-5 shadow-xl">
+      <div className="mt-8 w-full max-w-sm rounded-3xl bg-white/95 p-5 shadow-xl">
         <div className="mb-2 flex items-center justify-between">
           <span className="text-lg font-extrabold text-slate-700">Level {level}</span>
           <span className="text-sm font-bold text-slate-500">{progress.points} pts</span>
@@ -69,6 +75,14 @@ export default function HomeScreen({ progress, onStart, onToggleSound }: Props) 
         className="mt-8 rounded-full bg-gradient-to-r from-amber-400 to-orange-500 px-10 py-5 text-2xl font-black text-white shadow-xl"
       >
         Start Adventure 🚀
+      </motion.button>
+
+      <motion.button
+        whileTap={{ scale: 0.96 }}
+        onClick={onOpenShop}
+        className="mt-4 rounded-full bg-white/95 px-8 py-3 text-lg font-extrabold text-slate-700 shadow-lg"
+      >
+        🛍️ Avatar Shop
       </motion.button>
     </div>
   )

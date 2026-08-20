@@ -29,6 +29,7 @@ export default function QuizRoundScreen({ subject, topic, length, mode, progress
   const [queue, setQueue] = useState<Question[]>(() => buildRoundQueue(pool, length, progress.missedQueue[topicKey] ?? []))
   const [index, setIndex] = useState(0)
   const [startPoints] = useState(progress.points)
+  const [startCoins] = useState(progress.coins)
   const [streak, setStreak] = useState(0)
   const [bestStreakRound, setBestStreakRound] = useState(0)
   const [correctCount, setCorrectCount] = useState(0)
@@ -54,6 +55,7 @@ export default function QuizRoundScreen({ subject, topic, length, mode, progress
       updateProgress((prev) => ({
         ...prev,
         points: prev.points + awarded,
+        coins: prev.coins + awarded,
         bestStreak: Math.max(prev.bestStreak, newStreak),
       }))
 
@@ -128,6 +130,7 @@ export default function QuizRoundScreen({ subject, topic, length, mode, progress
     })
 
     const pointsEarned = progress.points - startPoints
+    const coinsEarned = progress.coins - startCoins
     const levelBefore = levelForPoints(startPoints)
     const levelAfter = levelForPoints(progress.points)
 
@@ -139,6 +142,7 @@ export default function QuizRoundScreen({ subject, topic, length, mode, progress
       correct: correctCount,
       bestStreak: bestStreakRound,
       pointsEarned,
+      coinsEarned,
       stars,
       newBadges: newBadges.map((b) => b.id),
       leveledUp: levelAfter > levelBefore,
@@ -176,7 +180,7 @@ export default function QuizRoundScreen({ subject, topic, length, mode, progress
       </div>
 
       <div className="mb-4">
-        <Companion mood={mood} />
+        <Companion mood={mood} equipped={progress.equipped} />
       </div>
 
       <QuestionCard
