@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import type { Progress } from '../types'
 import { findItem } from '../data/shopItems'
+import LumaSprite from './LumaSprite'
 
 export type CompanionMood = 'idle' | 'happy' | 'streak' | 'sad' | 'comeback'
 
@@ -35,9 +36,11 @@ export default function Companion({ mood = 'idle', equipped, size = 'md' }: Prop
   const accessory = findItem(equipped?.accessory)
   const background = findItem(equipped?.background)
   const face = base?.emoji ?? DEFAULT_FACE
+  const isCustom = base?.custom
 
   const ringSize = size === 'lg' ? 'h-32 w-32' : 'h-24 w-24'
   const faceSize = size === 'lg' ? 'text-7xl' : 'text-6xl'
+  const spriteSize = size === 'lg' ? 'h-20 w-20' : 'h-16 w-16'
 
   return (
     <div className="relative flex flex-col items-center">
@@ -69,9 +72,9 @@ export default function Companion({ mood = 'idle', equipped, size = 'md' }: Prop
           key={mood}
           animate={animation}
           transition={{ duration: mood === 'idle' ? 2 : 0.6, repeat: mood === 'idle' ? Infinity : 0, ease: 'easeInOut' }}
-          className={`${faceSize} drop-shadow-lg select-none`}
+          className={isCustom ? `${spriteSize} drop-shadow-lg` : `${faceSize} drop-shadow-lg select-none`}
         >
-          {face}
+          {isCustom ? <LumaSprite className="h-full w-full" /> : face}
         </motion.div>
         {accessory && (
           <span className="absolute -right-1 bottom-0 text-2xl drop-shadow" aria-hidden>

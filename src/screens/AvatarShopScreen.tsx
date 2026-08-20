@@ -3,6 +3,7 @@ import type { AvatarSlot, Progress, ShopItem } from '../types'
 import { SHOP_ITEMS, SLOT_LABELS, itemsForSlot } from '../data/shopItems'
 import { playCorrect, playTap } from '../lib/sound'
 import Companion from '../components/Companion'
+import LumaSprite from '../components/LumaSprite'
 
 interface Props {
   progress: Progress
@@ -91,7 +92,9 @@ export default function AvatarShopScreen({ progress, updateProgress, onBack }: P
                             : 'bg-slate-200 text-slate-400'
                     }`}
                   >
-                    {item.emoji ? (
+                    {item.custom ? (
+                      <LumaSprite className="h-10 w-10" />
+                    ) : item.emoji ? (
                       <span className="text-3xl">{item.emoji}</span>
                     ) : (
                       <span className={`h-8 w-8 rounded-full bg-gradient-to-br ${item.gradient}`} />

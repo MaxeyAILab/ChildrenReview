@@ -2,7 +2,7 @@ import type { ShopItem } from '../types'
 
 export const SHOP_ITEMS: ShopItem[] = [
   { id: 'base-fox', slot: 'base', label: 'Fox (Starter)', emoji: '🦊', cost: 0 },
-  { id: 'base-gardevoir', slot: 'base', label: 'Gardevoir', emoji: '🧚', cost: 220 },
+  { id: 'base-luma', slot: 'base', label: 'Luma the Star Sprite', custom: true, cost: 220 },
   { id: 'base-gengar', slot: 'base', label: 'Gengar', emoji: '👻', cost: 220 },
   { id: 'base-charizard', slot: 'base', label: 'Charizard', emoji: '🐉', cost: 280 },
 

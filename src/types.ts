@@ -52,6 +52,8 @@ export interface ShopItem {
   label: string
   emoji?: string
   gradient?: string
+  /** Rendered by a dedicated component (see LumaSprite) instead of an emoji glyph. */
+  custom?: boolean
   cost: number
 }
 
